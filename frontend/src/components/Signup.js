@@ -28,17 +28,17 @@ function Signup({ onSuccess }) {
     }
 
     try {
-      // Your backend currently expects only username + password
-      const res = await axios.post("http://localhost:5000/signup", {
-        username,
-        password,
-      });
+const res = await axios.post("https://retro-login-1.onrender.com/", {
+  name,
+  username,
+  email,
+  gender,
+  password,
+});
 
       if (res.status === 200 && res.data?.message) {
         setMsg("✅ Signup successful!");
         setSuccess(true);
-
-        // Create a user object for the frontend (backend doesn’t store these yet)
         const userObj = {
           name,
           username,
