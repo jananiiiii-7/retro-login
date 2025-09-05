@@ -1,0 +1,66 @@
+
+@keyframes popupAppear {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.titlebar {
+  background: linear-gradient(90deg, #704f7b, #7c0f6e);
+  border: 3px solid #bdacb1;
+  border-radius: 14px;
+  padding: 6px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.control-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  border: 5px solid #bdacb1;
+  cursor: pointer;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  color: #fff;
+  transition: transform 0.1s;
+}
+
+.control-btn:hover {
+  transform: scale(1.1);
+}
+
+.control-btn.minimize { background: #9b68bb; }
+.control-btn.close { background: #a23249; }
+
+.popup-content {
+  padding: 25px;
+  display: grid;
+  gap: 14px;
+}
+
+.popup-content .input {
+  width: 100%;             /* fill inside popup */
+  box-sizing: border-box;  /* prevent overflow */
+}
+.popup {
+  width: 500px;
+  background: #8c75c1;
+  border: 3px solid #a82a52;
+  border-radius: 14px;
+  box-shadow: 0 0 24px #555b1f, 0 0 12px rgba(167, 110, 44, 0.6);
+  overflow: hidden;
+  position: relative;
+  animation: popupAppear 0.3s ease-out;
+  margin-top: -100px; 
+}
